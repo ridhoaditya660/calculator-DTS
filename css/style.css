@@ -1,0 +1,88 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Orbitron';
+	height: 100%;
+}
+
+.container {
+	max-width: 32rem;
+	margin: 0 auto;
+	background-color: #08070b;
+	padding: 1rem;
+	border-radius: 0.8rem;
+	margin-top: 3rem;
+}
+
+.display {
+	width: 100%;
+	background-color: #fff;
+	border-radius: 0.2rem;
+	padding: 1rem;
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: right;
+	border: 1px solid #ccc;
+	display: flex;
+	justify-content: space-between;
+}
+
+.prev_output {
+	font-size: 1rem;
+}
+
+.action-wrapper {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+.action-wrapper .action-button {
+	height: 100px;
+	width: 100px;
+	border-radius: 2rem;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+
+.operand_ac {
+	color: #8b77ed !important;
+}
+
+.operand_equals {
+	background-color: #8b77ed !important;
+}
+
+.operand_equals:hover {
+	background-color: #b2a4f1 !important;
+}
+
+.action-button:hover {
+	background-color: #444444;
+}
+
+.operand_delete {
+	grid-column-start: 2;
+	grid-column-end: 4;
+	width: 100% !important;
+	grid-row: 1;
+}
+
+.multiply {
+	grid-column: 4;
+	grid-row-start: 4;
+	grid-row-end: 6;
+	height: 100% !important;
+}
