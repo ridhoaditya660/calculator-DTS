@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-	max-width: 32rem;
+	max-width: 28rem;
 	margin: 3rem auto;
 	background-color: #08070b;
 	padding: 1rem;
@@ -43,7 +43,7 @@ body {
 
 .action-wrapper .action-button {
 	height: 100px;
-	width: 100px;
+	/* width: 100px; */
 	border-radius: 2rem;
 	background-color: black;
 	display: flex;
@@ -70,13 +70,6 @@ body {
 
 .action-button:hover {
 	background-color: #444444;
-}
-
-.operand_delete {
-	grid-column-start: 2;
-	grid-column-end: 4;
-	width: 100% !important;
-	grid-row: 1;
 }
 
 .multiply {
