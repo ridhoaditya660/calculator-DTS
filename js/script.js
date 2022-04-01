@@ -59,6 +59,10 @@ class Calculator {
 		this.previousOperand = '';
 	}
 
+	percentNumber() {
+		this.currentOperand = parseFloat(this.currentOperand) / 100;
+	}
+
 	getDisplayNumber(number) {
 		const stringNumber = number.toString();
 		const integerDigits = parseFloat(stringNumber.split('.')[0]);
@@ -98,6 +102,7 @@ const deleteButton = document.querySelector('.operand_delete');
 const curOperand = document.querySelector('.cur_output');
 const prevOperand = document.querySelector('.prev_output');
 const allClear = document.querySelector('.operand_ac');
+const percentOperand = document.querySelector('.operand_percent');
 
 const calculator = new Calculator(prevOperand, curOperand);
 
@@ -106,6 +111,11 @@ numberButtons.forEach(button => {
 		calculator.appendNumber(button.innerText);
 		calculator.updateDisplay();
 	});
+});
+
+percentOperand.addEventListener('click', () => {
+	calculator.percentNumber();
+	calculator.updateDisplay();
 });
 
 operationButtons.forEach(button => {
